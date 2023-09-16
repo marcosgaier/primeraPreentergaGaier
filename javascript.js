@@ -30,7 +30,7 @@ const opcionesBlanqueria = [
   crearProducto("Sábana de seda", 35000),
 ];
 
-
+// Funcin principal
 function tiendaOnline() {
   console.log("Bienvenid@ a la tienda online!");
 
@@ -58,7 +58,7 @@ function tiendaOnline() {
         break;
       case 0:
         finalizarCompra();
-        return; // Salir de la función cuando finaliza la compra
+        return; 
       default:
         console.log("Opción no válida.");
         break;
@@ -109,7 +109,7 @@ function tiendaOnline() {
         totalCompra += totalProducto;
         totalProductos += cantidad;
 
-        // Agregar el producto al carrito
+        // agrgar el producto al carrito
         carrito.push({ producto: productoSeleccionado, cantidad });
         console.log(`Compraste ${cantidad} ${productoSeleccionado.nombre}(s) por un total de $${totalProducto}`);
       } else {
@@ -130,8 +130,11 @@ function tiendaOnline() {
   function finalizarCompra() {
     console.log(`Resumen de la compra:\nTotal de productos comprados: ${totalProductos}\nTotal de la compra: $${totalCompra.toFixed(2)}`);
     console.log("Gracias por tu compra!!");
+    
+    
+    alert("¡Gracias por tu compra!");
   }
 }
 
-// Invoco menu
+// invoco menu
 tiendaOnline();
